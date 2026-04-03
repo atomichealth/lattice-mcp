@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/atomichealth/lattice-mcp/compare/v1.0.0...v1.1.0) (2026-04-03)
+
+
+### Features
+
+* add unit tests for token, auth, state, server, config ([2fe2b5b](https://github.com/atomichealth/lattice-mcp/commit/2fe2b5b89e629433d265d56d3f275230d83b66f9))
+
 # 1.0.0 (2026-04-03)
 
 
