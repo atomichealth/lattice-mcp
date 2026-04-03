@@ -1,6 +1,6 @@
 {
   "name": "@atomichealth/lattice-mcp",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Lattice MCP server — access the Lattice knowledge graph from Claude Code",
   "type": "module",
   "bin": {

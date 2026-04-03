@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/atomichealth/lattice-mcp/compare/v1.1.0...v1.2.0) (2026-04-03)
+
+
+### Features
+
+* bi-temporal knowledge graph model with structured observations ([6dacad6](https://github.com/atomichealth/lattice-mcp/commit/6dacad62a5a67e843a487b4ab7f8e117198fc1aa))
+
 # [1.1.0](https://github.com/atomichealth/lattice-mcp/compare/v1.0.0...v1.1.0) (2026-04-03)
 
 
