@@ -3,7 +3,7 @@
  */
 
 export const LATTICE_URL =
-  process.env.LATTICE_URL || "https://api.lattice.run";
+  process.env.LATTICE_URL || "https://lattice.atomic.health";
 
 export const LATTICE_COLLECTION =
   process.env.LATTICE_COLLECTION || "";
