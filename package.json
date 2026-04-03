@@ -1,0 +1,79 @@
+{
+  "name": "@atomichealth/lattice-mcp",
+  "version": "0.0.0",
+  "description": "Lattice MCP server — access the Lattice knowledge graph from Claude Code",
+  "type": "module",
+  "bin": {
+    "lattice-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "bun run src/index.ts",
+    "start": "node dist/index.js",
+    "test": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.28.0",
+    "open": "^10.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^22.0.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "semantic-release": "^24.0.0",
+    "typescript": "^5.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            { "type": "feat", "release": "minor" },
+            { "type": "fix", "release": "patch" },
+            { "type": "perf", "release": "patch" },
+            { "type": "refactor", "release": "patch" },
+            { "breaking": true, "release": "major" }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        { "changelogFile": "CHANGELOG.md" }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
