@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { existsSync, mkdirSync, rmSync, readFileSync } from "node:fs";
+import { existsSync, mkdirSync, rmSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 
@@ -22,7 +22,6 @@ interface StoredToken {
 
 function saveToken(token: StoredToken): void {
   if (!existsSync(TEST_DIR)) mkdirSync(TEST_DIR, { recursive: true });
-  const { writeFileSync } = require("node:fs");
   writeFileSync(TOKEN_FILE, JSON.stringify(token, null, 2));
 }
 
