@@ -10,7 +10,8 @@
     "build": "tsc",
     "dev": "bun run src/index.ts",
     "start": "node dist/index.js",
-    "test": "tsc --noEmit"
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.28.0",
@@ -25,7 +26,8 @@
     "@types/node": "^22.0.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "semantic-release": "^24.0.0",
-    "typescript": "^5.8.0"
+    "typescript": "^5.8.0",
+    "vitest": "^4.1.2"
   },
   "publishConfig": {
     "access": "public"
